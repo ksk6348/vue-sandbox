@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>{{ message() }}</h2>
+    <h3>{{ value() }}</h3>
   </div>
 </template>
 
@@ -12,9 +13,15 @@ import {Component, Prop, Vue} from 'vue-property-decorator';
 export default class HelloWorld extends Vue {
   @Prop()
   private msg: string;
+  @Prop()
+  private val: string|number;
 
   private message(): string {
     return this.msg;
+  }
+
+  private value(): string|number {
+    return this.val;
   }
 }
 </script>
