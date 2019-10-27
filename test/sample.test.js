@@ -4,7 +4,7 @@ import App from '../src/App.vue';
 
 describe('test', () => {
   test('App snapshot', () => {
-    const wrapper = mount(App)
-    expect(wrapper.element).toMatchSnapshot()
-  })
-})
+    const wrapper = mount(App);
+    expect(wrapper.element).toMatchSnapshot();
+  });
+});
